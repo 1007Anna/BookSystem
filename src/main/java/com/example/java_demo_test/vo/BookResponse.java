@@ -18,7 +18,7 @@ public class BookResponse {
 	private Integer price;
 
 	private Integer inventory;
-
+	
 	private Integer sales;
 
 	private String category; // 類別
@@ -26,8 +26,10 @@ public class BookResponse {
 	private List<Book> responseBookList;
 
 	private String message;
-
+	
 	private Integer bookTotlePrice;
+	
+	private List<String> errIsbnList;
 
 	private Integer totlePrice;
 
@@ -52,6 +54,8 @@ public class BookResponse {
 		super();
 		this.message = message;
 	}
+
+	
 
 	public BookResponse(String title, String author, String isbn, Integer price, Integer inventory) {
 		super();
@@ -102,11 +106,11 @@ public class BookResponse {
 	}
 	
 
-	public BookResponse(List<Book> responseBookList, Integer bookTotlePrice) {
+	public BookResponse(List<Book> responseBookList, Integer bookTotlePrice, String message) {
 		super();
 		this.responseBookList = responseBookList;
 		this.bookTotlePrice = bookTotlePrice;
-
+		this.message = message;
 	}
 
 	public BookResponse(String title, String author, String isbn, Integer price, Integer sales,
@@ -214,6 +218,14 @@ public class BookResponse {
 
 	public void setTotlePrice(Integer totlePrice) {
 		this.totlePrice = totlePrice;
+	}
+
+	public List<String> getErrIsbnList() {
+		return errIsbnList;
+	}
+
+	public void setErrIsbnList(List<String> errIsbnList) {
+		this.errIsbnList = errIsbnList;
 	}
 
 

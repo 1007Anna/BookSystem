@@ -3,7 +3,6 @@ package com.example.java_demo_test.vo;
 import java.util.List;
 import java.util.Map;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class BookRequest {
@@ -36,6 +35,8 @@ public class BookRequest {
 	private Integer updateSales;	//更新銷售
 	
 	private Integer ordered;	// 訂購數量
+	
+	private String status;	// 身分
 	
 	@JsonProperty("book_Map")
 	private Map<String,Integer> bookMap;
@@ -176,6 +177,15 @@ public class BookRequest {
 	public void setUpdateSales(Integer updateSales) {
 		this.updateSales = updateSales;
 	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
 	
 	
 	

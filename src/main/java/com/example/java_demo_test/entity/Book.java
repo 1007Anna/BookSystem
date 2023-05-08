@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Entity
 @Table(name = "book_system")
 public class Book {
-
+	
 	@Column(name = "title")
 	private String title; // 書名
 
@@ -136,9 +136,6 @@ public class Book {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	
-
-
 	
 
 }
